@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ms-user
+  datasource:
+    url: jdbc:postgresql://localhost:${MSUSER_POSTGRES_HOST_PORT:5432}/${MSUSER_POSTGRES_DB}
+    username: ${MSUSER_POSTGRES_USER}
+    password: ${MSUSER_POSTGRES_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    enabled: true
+    change-log: classpath:db/master.xml
+    default-schema: public
+    liquibase-schema: public
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
