@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet id="202610181511-create-index-users" author="devricardorocha">
+        <createIndex tableName="users" indexName="uk_users_external_id" unique="true"><column name="external_id"/></createIndex>
+        <createIndex tableName="users" indexName="uk_users_code" unique="true"><column name="code"/></createIndex>
+        <createIndex tableName="users" indexName="uk_users_email" unique="true"><column name="email"/></createIndex>
+        <createIndex tableName="users" indexName="idx_users_manager_id"><column name="manager_id"/></createIndex>
+    </changeSet>
+</databaseChangeLog>

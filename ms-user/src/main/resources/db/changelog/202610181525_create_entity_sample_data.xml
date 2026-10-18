@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet id="202610181525-create-entity-sample-data" author="devricardorocha" context="sample-data">
+        <insert tableName="users">
+            <column name="id" value="10000000-0000-0000-0000-000000000001"/>
+            <column name="version" valueNumeric="0"/>
+            <column name="created_at" valueDate="2026-01-01T00:00:00"/>
+            <column name="created_by" value="seed"/>
+            <column name="updated_at" valueDate="2026-01-01T00:00:00"/>
+            <column name="updated_by" value="seed"/>
+            <column name="external_id" value="sample-manager-001"/>
+            <column name="code" value="MGR00001"/>
+            <column name="email" value="manager@sample.test"/>
+            <column name="first_name" value="Alex"/>
+            <column name="last_name" value="Manager"/>
+            <column name="birth_date" valueDate="1985-04-12"/>
+            <column name="gender" value="OTHERS"/>
+            <column name="nationality" value="Brazilian"/>
+            <column name="marital_status" value="SINGLE"/>
+            <column name="hiring_date" valueDate="2026-11-01"/>
+            <column name="job_title" value="MANAGER"/>
+            <column name="active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="10000000-0000-0000-0000-000000000002"/>
+            <column name="version" valueNumeric="0"/>
+            <column name="created_at" valueDate="2026-01-01T00:00:00"/>
+            <column name="created_by" value="seed"/>
+            <column name="updated_at" valueDate="2026-01-01T00:00:00"/>
+            <column name="updated_by" value="seed"/>
+            <column name="external_id" value="sample-employee-001"/>
+            <column name="code" value="EMP00001"/>
+            <column name="email" value="employee@sample.test"/>
+            <column name="first_name" value="Taylor"/>
+            <column name="last_name" value="Employee"/>
+            <column name="birth_date" valueDate="1992-09-18"/>
+            <column name="gender" value="OTHERS"/>
+            <column name="nationality" value="Brazilian"/>
+            <column name="marital_status" value="SINGLE"/>
+            <column name="hiring_date" valueDate="2026-11-15"/>
+            <column name="job_title" value="ANALYST"/>
+            <column name="manager_id" value="10000000-0000-0000-0000-000000000001"/>
+            <column name="active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="address">
+            <column name="region" value="Pernambuco"/>
+            <column name="city" value="Recife"/>
+            <column name="timezone" value="America/Recife"/>
+            <column name="zip_code" value="50000000"/>
+            <column name="line1" value="Rua de Exemplo, 100"/>
+            <column name="user_id" value="10000000-0000-0000-0000-000000000001"/>
+        </insert>
+        <insert tableName="address">
+            <column name="region" value="Pernambuco"/>
+            <column name="city" value="Recife"/>
+            <column name="timezone" value="America/Recife"/>
+            <column name="zip_code" value="50000001"/>
+            <column name="line1" value="Avenida de Exemplo, 200"/>
+            <column name="user_id" value="10000000-0000-0000-0000-000000000002"/>
+        </insert>
+        <insert tableName="user_documents">
+            <column name="user_id" value="10000000-0000-0000-0000-000000000001"/>
+            <column name="type" value="CPF"/>
+            <column name="raw_number" value="00000000000"/>
+            <column name="display_number" value="000.000.000-00"/>
+        </insert>
+        <insert tableName="user_documents">
+            <column name="user_id" value="10000000-0000-0000-0000-000000000002"/>
+            <column name="type" value="CPF"/>
+            <column name="raw_number" value="11111111111"/>
+            <column name="display_number" value="111.111.111-11"/>
+        </insert>
+        <insert tableName="contact_emails">
+            <column name="email" value="alex.personal@sample.test"/>
+            <column name="user_id" value="10000000-0000-0000-0000-000000000001"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="contact_emails">
+            <column name="email" value="taylor.personal@sample.test"/>
+            <column name="user_id" value="10000000-0000-0000-0000-000000000002"/>
+            <column name="principal" valueBoolean="true"/>
+        </insert>
+        <insert tableName="contact_phonenumbers">
+            <column name="country_code" value="+55"/>
+            <column name="raw_number" value="81999990001"/>
+            <column name="display_number" value="+55 81 99999-0001"/>
+            <column name="label" value="MOBILE"/>
+            <column name="principal" valueBoolean="true"/>
+            <column name="user_id" value="10000000-0000-0000-0000-000000000001"/>
+        </insert>
+        <insert tableName="contact_phonenumbers">
+            <column name="country_code" value="+55"/>
+            <column name="raw_number" value="81999990002"/>
+            <column name="display_number" value="+55 81 99999-0002"/>
+            <column name="label" value="MOBILE"/>
+            <column name="principal" valueBoolean="true"/>
+            <column name="user_id" value="10000000-0000-0000-0000-000000000002"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

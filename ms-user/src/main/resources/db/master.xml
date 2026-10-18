@@ -4,6 +4,20 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
-
+    <include file="db/changelog/202610181511_create_entity_users.xml"/>
+    <include file="db/changelog/202610181511_create_entity_address.xml"/>
+    <include file="db/changelog/202610181511_create_entity_contact_emails.xml"/>
+    <include file="db/changelog/202610181511_create_entity_contact_phonenumbers.xml"/>
+    <include file="db/changelog/202610181511_create_entity_user_documents.xml"/>
+    <include file="db/changelog/202610181511_create_fk_address_user.xml"/>
+    <include file="db/changelog/202610181511_create_fk_contact_emails_user.xml"/>
+    <include file="db/changelog/202610181511_create_fk_contact_phonenumbers_user.xml"/>
+    <include file="db/changelog/202610181511_create_fk_user_documents_user.xml"/>
+    <include file="db/changelog/202610181511_create_fk_users_manager.xml"/>
+    <include file="db/changelog/202610181511_create_index_users.xml"/>
+    <include file="db/changelog/202610181511_create_index_address.xml"/>
+    <include file="db/changelog/202610181511_create_index_contact_emails.xml"/>
+    <include file="db/changelog/202610181511_create_index_contact_phonenumbers.xml"/>
+    <include file="db/changelog/202610181525_create_entity_sample_data.xml"/>
 
 </databaseChangeLog>
