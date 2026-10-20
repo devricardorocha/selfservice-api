@@ -47,7 +47,7 @@ public class User extends AuditableEntity {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToOne(mappedBy = "user", optional = false)
+    @OneToOne(mappedBy = "user", optional = false, cascade = CascadeType.ALL)
     private UserDocument userDocument;
 
     @Column(nullable = false, length = 32)
@@ -57,13 +57,13 @@ public class User extends AuditableEntity {
     @Enumerated(EnumType.STRING)
     private MaritalStatus maritalStatus;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Collection<Email> contactEmails;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Collection<PhoneNumber> contactPhoneNumbers;
 
-    @OneToOne(mappedBy = "user", optional = false)
+    @OneToOne(mappedBy = "user", optional = false, cascade = CascadeType.ALL)
     private Address address;
 
     @Column(length = 256)

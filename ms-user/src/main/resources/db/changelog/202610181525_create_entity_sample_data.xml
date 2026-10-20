@@ -6,8 +6,8 @@
             <column name="version" valueNumeric="0"/>
             <column name="created_at" valueDate="2026-01-01T00:00:00"/>
             <column name="created_by" value="seed"/>
-            <column name="updated_at" valueDate="2026-01-01T00:00:00"/>
-            <column name="updated_by" value="seed"/>
+            <column name="last_modified_at" valueDate="2026-01-01T00:00:00"/>
+            <column name="last_modified_by" value="seed"/>
             <column name="external_id" value="sample-manager-001"/>
             <column name="code" value="MGR00001"/>
             <column name="email" value="manager@sample.test"/>
@@ -26,8 +26,8 @@
             <column name="version" valueNumeric="0"/>
             <column name="created_at" valueDate="2026-01-01T00:00:00"/>
             <column name="created_by" value="seed"/>
-            <column name="updated_at" valueDate="2026-01-01T00:00:00"/>
-            <column name="updated_by" value="seed"/>
+            <column name="last_modified_at" valueDate="2026-01-01T00:00:00"/>
+            <column name="last_modified_by" value="seed"/>
             <column name="external_id" value="sample-employee-001"/>
             <column name="code" value="EMP00001"/>
             <column name="email" value="employee@sample.test"/>

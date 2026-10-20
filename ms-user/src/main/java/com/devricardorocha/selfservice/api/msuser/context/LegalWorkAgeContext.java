@@ -1,4 +1,4 @@
-package com.devricardorocha.selfservice.api.msuser.contexts;
+package com.devricardorocha.selfservice.api.msuser.context;
 
 import lombok.Getter;
 

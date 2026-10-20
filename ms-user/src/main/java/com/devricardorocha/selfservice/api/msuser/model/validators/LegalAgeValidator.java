@@ -1,6 +1,6 @@
 package com.devricardorocha.selfservice.api.msuser.model.validators;
 
-import com.devricardorocha.selfservice.api.msuser.contexts.LegalWorkAgeContext;
+import com.devricardorocha.selfservice.api.msuser.context.LegalWorkAgeContext;
 import com.devricardorocha.selfservice.api.msuser.model.validators.annotations.LegalAge;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
