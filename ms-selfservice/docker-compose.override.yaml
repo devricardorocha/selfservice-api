@@ -8,3 +8,23 @@ services:
       - "8080:8080"
     command:
       - 'start-dev'
+  redmine:
+    image: redmine:latest
+    container_name: redmine_app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      REDMINE_DB_POSTGRES: ${REDMINE_DB_POSTGRES}
+      REDMINE_DB_PORT: ${REDMINE_DB_PORT}
+      REDMINE_DB_USERNAME: ${REDMINE_DB_USERNAME}
+      REDMINE_DB_PASSWORD: ${REDMINE_DB_PASSWORD}
+      REDMINE_DB_DATABASE: ${REDMINE_DB_DATABASE}
+    volumes:
+      - redmine_data:/usr/src/redmine/files
+      - redmine_plugins:/usr/src/redmine/plugins
+      - redmine_themes:/usr/src/redmine/public/themes
+volumes:
+  redmine_data:
+  redmine_plugins:
+  redmine_themes:
