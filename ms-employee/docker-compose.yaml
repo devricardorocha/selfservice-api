@@ -1,0 +1,29 @@
+name: msemployee-api
+services:
+  postgres:
+    image: postgres:18
+    container_name: selfservice-api-msemployee-postgres-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${MSEMPLOYEE_POSTGRES_DB}
+      POSTGRES_USER: ${MSEMPLOYEE_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${MSEMPLOYEE_POSTGRES_PASSWORD}
+    ports:
+      - "${MSEMPLOYEE_POSTGRES_HOST_PORT:-5432}:${MSEMPLOYEE_POSTGRES_PORT:-5432}"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    networks:
+      - msemployee-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d ${MSEMPLOYEE_POSTGRES_DB} -U ${MSEMPLOYEE_POSTGRES_USER}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    name: selfservice-msemployee-pgdata
+
+networks:
+  msemployee-network:
+    name: selfservice-msemployee-network

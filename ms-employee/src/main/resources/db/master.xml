@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <include file="db/changelog/202610181511_create_entity_employees.xml"/>
+    <include file="db/changelog/202610181511_create_entity_address.xml"/>
+    <include file="db/changelog/202610181511_create_entity_contact_emails.xml"/>
+    <include file="db/changelog/202610181511_create_entity_contact_phonenumbers.xml"/>
+    <include file="db/changelog/202610181511_create_entity_employee_documents.xml"/>
+    <include file="db/changelog/202610181511_create_fk_address_employee.xml"/>
+    <include file="db/changelog/202610181511_create_fk_contact_emails_employee.xml"/>
+    <include file="db/changelog/202610181511_create_fk_contact_phonenumbers_employee.xml"/>
+    <include file="db/changelog/202610181511_create_fk_employee_documents_employee.xml"/>
+    <include file="db/changelog/202610181511_create_fk_employees_manager.xml"/>
+    <include file="db/changelog/202610181511_create_index_employees.xml"/>
+    <include file="db/changelog/202610181511_create_index_address.xml"/>
+    <include file="db/changelog/202610181511_create_index_contact_emails.xml"/>
+    <include file="db/changelog/202610181511_create_index_contact_phonenumbers.xml"/>
+    <include file="db/changelog/202610181525_create_entity_sample_data.xml"/>
+
+</databaseChangeLog>
